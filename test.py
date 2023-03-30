@@ -59,6 +59,7 @@ tp = trace_packet.TracePacket()
 tp.timestamp = 290
 tp.track_event.type = TYPE_SLICE_END
 tp.track_event.track_uuid = 49083589894
+tp.trusted_packet_sequence_id = 3903809
 
 packet_list.append(tp)
 
