@@ -32,11 +32,25 @@ top.packet.append(tp)
 
 tp = trace.TracePacket()
 
+da1 = trace.DebugAnnotation()
+da1.name = "foo"
+da1.int_value = 42
+da2 = trace.DebugAnnotation()
+da2.name = "bar"
+da2.int_value = 42
+
+da3 = trace.DebugAnnotation()
+da3.name ="args"
+da3.dict_entries.append(da1)
+da3.dict_entries.append(da2)
+
 tp.timestamp = 200
 tp.track_event.type = TYPE_SLICE_BEGIN
 tp.track_event.track_uuid = 49083589894
 tp.track_event.name = "My special parent"
+tp.track_event.debug_annotations.append(da3)
 tp.trusted_packet_sequence_id = 3903809
+
 
 top.packet.append(tp)
 
