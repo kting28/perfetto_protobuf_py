@@ -2,6 +2,8 @@
 The perfetto `.proto` definition was copied from the `perfetto.dev` repo.
 See the [synthetic track event guide](https://perfetto.dev/docs/reference/synthetic-track-event) for some documentation on creating these events. The output binary file can be opened from the perfetto UI. The `traceconv` tool is copied here for examining the generated binary.
 
+The examples used in this repo are all lifted from the instructions above.
+
 # Prerequisite
 ```
 pip3 install protobuf
